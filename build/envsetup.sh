@@ -98,6 +98,17 @@ function breakfast()
     return $?
 }
 
+function mkberyllium ()
+{
+    # Select beryllium and build system, vendor then halium-boot
+    breakfast beryllium && make halium-boot && make systemimage && make vendorimage
+    
+    echo "---------------------------------------"
+    echo "------Build for beryllium is done------"
+    echo "---------------------------------------"
+    
+}
+
 alias bib=breakfast
 
 function eat()
